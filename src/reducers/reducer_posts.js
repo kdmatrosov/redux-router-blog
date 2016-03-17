@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 
 export default function (state = INITIAL_STATE, action)
 {
-    switch (action.payload)
+    switch (action.type)
     {
         case FETCH_POSTS:
             return {
