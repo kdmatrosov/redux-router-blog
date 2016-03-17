@@ -11,11 +11,12 @@ class PostsShow extends Component {
 
     render() {
         const {post} = this.props;
-        if (!post){
+        if (!post || post.id != this.props.params.id){
             return (<div>Loading....</div>)
         }
         return (
             <div>
+                <Link to="/" >Back To Posts</Link>
                 <h3>{post.title}</h3>
                 <h6>Categories:{post.categories}</h6>
                 <p>{post.content}</p>
